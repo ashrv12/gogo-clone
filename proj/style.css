@@ -6,10 +6,13 @@
 .menu {
     width: 100vh;
     background-color: #9A7AFF;
+    padding-left: 13%;
+    padding-top: 3%;
 }
 
 nav {
     text-align: right;
+    font-size: 14px;
 }
 
 nav a {
