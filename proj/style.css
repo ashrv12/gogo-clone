@@ -1,0 +1,117 @@
+.logo-menu {
+    background-color: #9A7AFF;
+    display: flex;
+}
+
+.menu {
+    width: 100vh;
+    background-color: #9A7AFF;
+}
+
+nav {
+    text-align: right;
+}
+
+nav a {
+    padding: 53px 32px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.menu-style {
+    list-style-type: none;
+    font-family: sans-serif;
+    padding: 0;
+    margin-right: 0;
+}
+
+
+.book-title {
+    color: white;
+    font-size: 49px;
+    font-family: sans-serif;
+}
+.book-para {
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+body {
+    margin:0;
+}
+.book-container {
+    background-color: #9A7AFF;
+    height: 100vh;
+}
+.book-box {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15vh;
+    display: flex;
+    width: 100vh;
+}
+.book-txtbut {
+    width: 550px;
+
+}
+.book-image {
+    width: 600px;
+}
+.book-button {
+    font-size: 20px;
+    color: white;
+    background-color: #33C37E;
+    height: 72px;
+    width: 169px;
+    border-radius: 5px;
+    border: none;
+}
+
+.green-pencil {
+    background-color: #33C37E;
+    height: 100vh;
+}
+.green-crayon{
+    padding-top: 20vh;
+    width: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.green-figure {
+    text-align: center;
+}
+.green-texts {
+    font-family: sans-serif;
+    color: white;
+}
+.green-h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 49px;
+    text-align: center;
+}
+.green-p {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.green-button {
+    font-size: 20px;
+    color: white;
+    background-color: #9A7AFF;
+    height: 72px;
+    width: 169px;
+    border: none;
+    border-radius: 5px;
+}
+.gbutton-center {
+    text-align: center;
+}
+.crayon-png {
+    width: 723px;
+    height: 358px;
+}

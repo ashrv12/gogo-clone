@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+
+.first {
+    background-color: #9a7aff;
+    height: 100vh;
+    display: flex;
+}
+
+
+.booktext {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.image-of-book{
+    width: 723px;
+}
+
+
+.titleofbook {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.description-of-book {
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+}
