@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsla(60, 100%, 82%, 0.863);
+    border: 10px solid black;
+    height: 100vh;
+}
+
+
+
+.item{
+    height: 150px;
+    width: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+    border-width: 5px;
+    border-color: black;
+}
+
+
+#item1{
+    background-color: #7ED7C1;
+}
+
+
+#item2{
+    background-color: #F0DBAF;
+}
+
+
+#item3{
+    background-color: #DC8686;
+
+}
+
+
+#item4{
+    background-color: #B06161;
+}
+
+
+#item5{
+    background-color: hsl(240, 100%, 70%);
+}
