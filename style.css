@@ -18,36 +18,136 @@ body {
     max-width: 1100px;
 }
 
+/* start of section 1 */
+
+.gogomn {
+    width: 100%;
+}
+
+.background1 {
+    background-color: hsl(0, 0%, 84%);
+}
+
 .l-header {
+    height: 88px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .l-header-logo {
-    width: 90px;
+    width: 119px;
 }
 
 .l-header-menu {
     display: none;
 }
 
-.l-header-weather {
-    width: 270px;
-    flex: 1;
+/* font for menu also dropdown*/
+
+.navigation-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0 15px;
+    display: inline-block;
+}
+.navigation-english {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0 15px;
+}
+/* font end for menu */
+
+/* dropdown start */
+
+.dropdown-ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgb(0, 106, 255); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.navigation-item:hover .dropdown-content {
+    display: block;
+}
+
+/* dropdown end */
+
+
+/* weather area */
+.l-header-weather {
+    display: flex;
+    width: 270px;
+}
+
+.weather-box {
+    width: 65px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.weather-txt {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.rainy-icon {
+    grid-row-end: 3;
+    fill: rgb(242, 161, 57);
+}
+.calendar-icon {
+    grid-row-end: 3;
+    fill: rgb(67, 147, 206);
+}
+.dollar-icon {
+    grid-row-end: 3;
+    fill: rgb(67, 206, 67);
+}
+
+.weather-number {
+    grid-row-end: 3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500 !important;
+    justify-self: center;
+    align-self: center;
+}
+/* weather area end */
 .l-header-bar {
     width: 70px;
 }
 
+.material-symbols-outlined {
+    padding: 0 15px 0 15px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+
+
 @media (min-width: 960px) {
     .l-header {
-        gap: 20px;
+        display: flex;
+        justify-content: space-between;
         margin-bottom: 20px;
     }
 
     .l-header-menu {
-        display: block;
-        flex: 1;
+        display: flex;
+        justify-content: space-around;
     }
     
     .l-header-bar {
@@ -56,7 +156,8 @@ body {
     
     .l-header-weather {
         width: 270px;
-        flex: none;
+        display: flex;
+        justify-content: space-evenly;
     }
 }
 
@@ -74,6 +175,12 @@ body {
     flex: 1;
 }
 
+/* start of section 2 */
+
+.section2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
 
 .section2-logo {
     margin-bottom: 20px;
@@ -81,6 +188,7 @@ body {
 
 
 .section2-carousel {
+    height: 260px;
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
@@ -93,7 +201,7 @@ body {
 
 
 .carousel-box {
-    height: 350px;
+    height: 235px;
     border: 1px solid #222;
     border-radius: 10px;
     background-color: #999;
@@ -101,4 +209,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* section 2 long part */
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.today-txt {
+    color: #b7b6b6;
+    font-family: sans-serif;
+    font-size: 16px !important;
+}
+
+
+.section2-long {
+    height: 3000px;
+}
+
+li {
+    display: grid;
+}
+
+.day-change-button {
+    background-color: #b7b6b6;
+    border: 0;
+    height: 7px;
+    width: 100px;
+    border-radius: 3px;
+}
+
+.under-date {
+    width: 100px;
+    text-align: center;
+    color: #B7b6b6;
 }
