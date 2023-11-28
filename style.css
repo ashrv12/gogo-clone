@@ -25,7 +25,7 @@ body {
 }
 
 .background1 {
-    background-color: hsl(0, 0%, 84%);
+    background-color: #000;
 }
 
 .l-header {
@@ -46,6 +46,7 @@ body {
 /* font for menu also dropdown*/
 
 .navigation-item {
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding: 0 15px;
@@ -60,24 +61,35 @@ body {
 
 /* dropdown start */
 
-.dropdown-ul li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: rgb(0, 106, 255); /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
+/* .dropdown-content {
+    margin-top: 500px;
+    display: block;
+    position: relative;
+    background-color: #000;
+    min-width: 300px;
     z-index: 1;
 }
 
 .navigation-item:hover .dropdown-content {
-    display: block;
+} */
+
+.dropdown-ul {
+    margin-top: 500px;
+    display: none;
 }
+/* 
+.dropdown-ul {
+    list-style: none;
+} */
+/* 
+.dropdown-ul li::before {
+    content: "\2022";
+    color: aqua;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+} */
 
 /* dropdown end */
 
@@ -96,6 +108,7 @@ body {
 }
 
 .weather-txt {
+    color: white;
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -115,6 +128,7 @@ body {
 }
 
 .weather-number {
+    color: white;
     grid-row-end: 3;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -162,9 +176,43 @@ body {
 }
 
 .l-featured {
+    width: 100%;
+    height: 385px;
     margin-bottom: 20px;
+    display: grid;
+    padding-left: 40px;
+}
+/* widescreen start +960 px width */
+.widescreen-left {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
 }
 
+.widescreen-button {
+    color: white;
+    height: 30px;
+    width: 99px;
+    border-radius: 100px;
+    border: none;
+    background: linear-gradient(-129deg,#e08100,#c90027);
+
+}
+
+.widescreen-title {
+    color: white;
+}
+
+.widescreen-paragraph {
+    color: white;
+    grid
+}
+
+.widescreen-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* end of widescreen feature */
 .l-subfeatured {
     display: flex;
     gap: 15px;
@@ -219,11 +267,16 @@ ul {
 }
 
 .today-txt {
+    display: flex;
+    align-items: center;
     color: #b7b6b6;
     font-family: sans-serif;
     font-size: 16px !important;
 }
 
+.plant-icon {
+    fill: hsl(120, 82%, 71%)
+}
 
 .section2-long {
     height: 3000px;
