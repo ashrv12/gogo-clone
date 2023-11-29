@@ -24,12 +24,18 @@ body {
   width: 100%;
 }
 
+@media (max-width: 1135px) {
+  .gogomn {
+    margin-left: 20px;
+  }
+}
+
 .background1 {
   background-color: #000;
 }
 
 .l-header {
-  height: 88px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,6 +119,7 @@ body {
 .l-header-weather {
   display: flex;
   width: 270px;
+  justify-content: space-evenly;
 }
 
 .weather-box {
@@ -153,7 +160,18 @@ body {
 }
 /* weather area end */
 .l-header-bar {
-  width: 70px;
+  height: 100%;
+  width: 55px;
+  border-left: 3px solid #b7b6b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bars-icon {
+  fill: white;
+  height: 30px;
+  width: 30px;
 }
 
 @media (min-width: 960px) {
@@ -179,116 +197,220 @@ body {
   }
 }
 
+@media (max-width: 959px) {
+  .weather-box {
+    width: auto;
+    border: 1px dotted white;
+  }
+}
+/* remove the high res featured */
 .l-featured {
-  background: linear-gradient(
-    to right,
-    rgba(25, 25, 25, 100),
-    rgba(25, 25, 25, 0)
-  );
-  border-radius: 10px;
-  width: 100%;
-  height: 385px;
-  margin-bottom: 20px;
+  display: none;
+}
+/*  */
+
+.l-featured-mobile {
+  align-self: center;
+  width: 100vw;
+  height: 330px;
+  overflow: hidden;
   display: flex;
 }
-/* widescreen start +960 px width */
-.widescreen-left {
-  display: grid;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  align-items: center;
+
+.featured-carousel-button {
+  opacity: 0;
+  height: 7px;
+  width: 25%;
+  background-color: pink;
+  z-index: 1;
 }
 
-.widescreen-right {
-  width: 537px;
-  height: 385px;
+.featured-carousel-button:hover {
+  opacity: 1;
 }
 
-.widescreen-button {
+.featured-mob-content {
+  position: absolute;
+  width: 100vw;
+  height: 330px;
+  overflow: hidden;
+}
+
+.feature-background-pic {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mob-feat-txtbtn {
+  margin-left: auto;
+  margin-right: auto;
+  height: 45%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mobile-feature-txt {
+  cursor: pointer;
+  width: 90%;
+  margin: 5px auto;
+  color: black;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.mobile-featured-button {
+  cursor: pointer;
+  margin-left: 5%;
   font-family: sans-serif;
   font-size: 12px;
   color: white;
-  height: 30px;
+  height: 23px;
   width: 99px;
-  border-radius: 100px;
+  border-radius: 50px;
   border: none;
   background: linear-gradient(-129deg, #e08100, #c90027);
   transition: 0.3s;
 }
 
-.widescreen-button:hover {
+.mobile-featured-button:hover {
   width: 130px;
 }
 
-.widescreen-title {
-  font-family: sans-serif;
-  font-weight: 500;
-  color: white;
-  font-size: 26px;
-  margin-bottom: 0;
-}
-
-.widescreen-title:hover {
-  color: #999;
-  cursor: pointer;
-}
-
-.widescreen-paragraph {
-  /* height: 60px;
-    width: 470px; */
-  cursor: pointer;
-  font-family: sans-serif;
-  color: grey;
-  font-size: 13px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-}
-.widescreen-img {
-  margin-left: 15px;
-  width: 80%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.widescreen-icons {
+.mob-feature-icons {
   cursor: pointer;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  gap: 5px;
+  margin-left: 5%;
 }
 
-.widescreen-both-icon {
-  margin: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.widescreen-white-icon {
-  fill: rgb(255, 255, 255);
-  margin-right: 10px;
-}
-
-.widescreen-icon-number {
+.mobile-icon-number {
   color: white;
 }
 
-#open-icon-box {
-  padding: 7px;
-  background-color: rgb(35, 35, 35);
-  border-radius: 20px;
-}
+/* widescreen start +960 px width */
 
-#open-icon {
-  transition: rotate 0.5s;
-}
+@media (min-width: 960px) {
+  .l-featured-mobile {
+    display: none;
+  }
 
-#open-icon-box:hover > #open-icon {
-  rotate: 180deg;
+  .l-featured {
+    background: linear-gradient(
+      to right,
+      rgba(25, 25, 25, 100),
+      rgba(25, 25, 25, 0)
+    );
+    border-radius: 10px;
+    width: 100%;
+    height: 385px;
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .widescreen-left {
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    align-items: center;
+  }
+
+  .widescreen-right {
+    width: 537px;
+    height: 385px;
+  }
+
+  .widescreen-button {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: white;
+    height: 30px;
+    width: 99px;
+    border-radius: 100px;
+    border: none;
+    background: linear-gradient(-129deg, #e08100, #c90027);
+    transition: 0.3s;
+  }
+
+  .widescreen-button:hover {
+    width: 130px;
+  }
+
+  .widescreen-title {
+    font-family: sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+
+  .widescreen-title:hover {
+    color: #999;
+    cursor: pointer;
+  }
+
+  .widescreen-paragraph {
+    /* height: 60px;
+      width: 470px; */
+    cursor: pointer;
+    font-family: sans-serif;
+    color: grey;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+  .widescreen-img {
+    margin-left: 15px;
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .widescreen-icons {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .widescreen-both-icon {
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .widescreen-white-icon {
+    fill: rgb(255, 255, 255);
+    margin-right: 10px;
+  }
+
+  .widescreen-icon-number {
+    color: white;
+  }
+
+  #open-icon-box {
+    padding: 7px;
+    background-color: rgb(35, 35, 35);
+    border-radius: 20px;
+  }
+
+  #open-icon {
+    transition: rotate 0.5s;
+  }
+
+  #open-icon-box:hover > #open-icon {
+    rotate: 180deg;
+  }
 }
 
 /* end of widescreen feature */
