@@ -713,17 +713,41 @@ li {
 }
 
 .row-pic-border {
+  position: relative;
   height: 140px;
   width: 183px;
   overflow: hidden;
   border: 1px black solid;
   border-radius: 10px;
   align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .row-article-pic {
   width: auto;
   height: 100%;
+  transition: 0.5s;
+}
+
+.row-article-link {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  font-family: sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.mobile-row-article:hover .row-article-pic {
+  transform: scale(1.2);
+}
+
+.mobile-row-article:hover .row-article-link {
+  opacity: 1;
 }
 
 .row-article-txt {
